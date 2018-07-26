@@ -1,0 +1,12 @@
+{% extends 'base.html' %}]
+{% block content %}
+    <h4>
+    {{ category.title }}
+    </h4>
+    {% for blog in blogs %}
+         <hr>
+
+           <a href="{% url 'blog:blog' blog.id %}"> <h2>{{ blog.title }}</h2></a>
+            <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5>
+    {% endfor %}
+{% endblock %}]
